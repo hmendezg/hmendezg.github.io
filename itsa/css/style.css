@@ -1,0 +1,19 @@
+#imagegallery {
+	/*padding-top: 2rem;*/
+	padding-bottom: 12rem;
+}
+
+#mycarousel {
+	/*padding-top: 0.25rem;*/
+	background-color:darkgray;
+}
+.carousel-inner{
+	height:500px !important;
+}
+.carousel-caption{
+	color:black !important;
+	bottom:-50px !important;
+}
+
+.carousel-control-next{
+}

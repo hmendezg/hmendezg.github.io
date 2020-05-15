@@ -1,1 +1,379 @@
-Hello World 
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title><?=$siteTitle?></title>
+		<meta name="author" content="Enablitech">
+		<meta name="description" content="<?=$siteContent?>">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="Distribution" content="global"/>
+		<meta name="theme-color" content="#317EFB"/>
+		<meta name="Robots" content="all"/>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
+		<link rel="icon" href="img/favicon.ico" type="image/ico">
+
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">		
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">		
+		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">	
+		<link href="css/stylish-portfolio.css" rel="stylesheet">
+		
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		
+		<style>
+			#msg{
+				animation: hidemsg 0s 5s forwards;
+			}
+			@keyframes hidemsg{to{visibility:hidden;}}
+		</style>
+	</head>
+	
+	<body id="page-top">	
+		<a id="mnuMain" href="#" class="menu-toggle rounded mt-30 ml-0" name="mnuMain"><i class="fas fa-bars"></i></a>
+		<nav id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a id="mnuTitle" class="js-scroll-trigger" href="#page-top"><?=$mnuTitle?></a>
+				</li>
+				<li class="sidebar-nav-item">
+					<a id="mnuOStart" class="js-scroll-trigger" href="#page-top"><?=$mnuOStart?></a>
+				</li>
+				<li class="sidebar-nav-item">
+					<a id="mnuOProds" class="js-scroll-trigger" href="#allbusdesc"><?=$mnuOProds?></a>
+				</li>
+				<!--
+					<li class="sidebar-nav-item">
+					<a class="js-scroll-trigger" href="#portfolio">Proyectos</a>
+					</li>
+				-->
+				<li class="sidebar-nav-item">
+					<a id="mnuOContact" class="js-scroll-trigger" href="#contact"><?=$mnuOContact?></a>
+				</li>
+			</ul>
+		</nav>
+		<header class="masthead">
+			<div id="msg" class="text-center pt-20 text-white bg-dark"><?=$msg?></div>
+			<div id="lang" class="text-left">
+				<form id="frmLang" name="frmLang" action="cookieLang.php" method="POST">
+					<div class="form-group m-0 p-0" style="height:0px">
+						<input name="lang" class="form-control p-0 m-0 control-label invisible" value="<?=$tlang?>">
+					</div>
+					<input type="submit" class="btn btn-sm m-1" value="<?=$langTitle?>">
+				</form>
+			</div>
+			<div id="hdr" class="container text-center my-auto">
+				<div>
+					<h1 class="mb-1 hdrtitle">Enablitech</h1>
+					<h3 class="mb-5 hdrsubtitle">
+						<span id="siteSubtitle"><?=$siteSubtitle?></span>
+					</h3>
+					<h4>
+						<em id="siteSlogan"><?=$siteSlogan?></em>
+					</h4>
+				</div>
+			</div>
+			<div class="overlay"></div>
+		</header>		
+		<section id="allbusdesc" class="content-section bg-primary text-black text-center py-4" id="services">
+			<div class="container">
+				<div class="content-section-heading"></div>
+				<div class="row">
+					<div class="col-md-4 mb-5 mb-lg-0">
+						<div>
+							<div>
+								<!--
+								<a href="itsa" name="itsa">
+								-->
+									<span class="service-icon rounded-circle mx-auto mb-3">
+										<i class="icon-screen-desktop"></i>
+									</span>
+								<!--
+								</a>
+								-->
+							</div>
+							<div style="vertical-align: bottom;">
+								<!--
+								<a href="../itsa"><h4><strong id="prdITSA"><?=$prdITSA?></strong></h4></a>
+								-->
+								<h4><strong id="prdITSA"><?=$prdITSA?></strong></h4>
+							</div>
+						</div>
+						<div>
+							<p id="prdITSA_desc"><?=$prdITSA_desc?></p>
+							<!--
+							<a id="prdITSA_desc_more" class="p-2 mb-0 text-primary bg-white" href="itsa"><?=$prdITSA_desc_more?></a>
+							-->
+						</div>
+					</div>
+					<div class="col-md-4 mb-5 mb-lg-0">
+						<div>
+							<span class="service-icon rounded-circle mx-auto mb-3">
+								<i class="icon-magnifier"></i>
+							</span>
+							<h4>
+								<strong id="srvITSA"><?=$srvITSA?></strong>
+							</h4>
+						</div>
+						<div>
+							<p class="mb-0" id="srvITSA_desc"><?=$srvITSA_desc?></p>
+						</div>
+					</div>
+					<div class="col-md-4 mb-5 mb-lg-0">
+						<div>
+							<span class="service-icon rounded-circle mx-auto mb-3">
+								<i class="icon-book-open"></i>
+							</span>
+							<h4>
+								<strong id="srvImpITSA"><?=$srvImpITSA?></strong>
+							</h4>
+						</div>
+						<div>
+							<p class="mb-0" id="srvImpITSA_desc"><?=$srvImpITSA_desc?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--
+		<!- - Portfolio - ->
+		<section class="content-section" id="portfolio">
+			<div class="container">
+				<div class="content-section-heading text-center">
+					<!- -h3 class="text-secondary mb-0">Proyectos</h3>- ->
+					<h2 class="mb-5">Proyectos Recientes</h2>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #1</h3>
+						<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>					
+						</span>
+						</span>
+					</div>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #2</h3>
+						<p>Descripción del proyecto #2</p>
+						</span>
+						</span>
+					</div>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #3</h3>
+						<p>Descripción del proyecto #3</p>
+						</span>
+						</span>
+					</div>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #4</h3>
+						<p>Descripción del proyecto #4</p>
+						</span>
+						</span>
+					</div>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #5</h3>
+						<p>Descripción del proyecto #5</p>
+						</span>
+						</span>
+					</div>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #6</h3>
+						<p>Descripción del proyecto #6</p>
+						</span>
+						</span>
+					</div>
+					<div class="proj">
+						<span class="caption">
+						<span class="caption-content">
+						<h3>Proyecto #4</h3>
+						<p>Descripción del proyecto #4</p>
+						</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		-->	
+		<section id="contact" class="content-section py-4">
+			<div class="container">
+				<div class="content-section-heading text-center">
+					<div class="content-section-heading text-center">
+						<img src="img/contact.png" alt="ContactImg"/>					
+
+						<div>
+							<div class="text-left">
+								&phone; Cel. +1-829-967-4907
+							</div>							
+							<div class="text-left">
+								&#x2709; <a href="mailto:hsmendezg@gmail.com">Sales@enablitech.com</a>
+							</div>
+						</div>
+						<!--
+						<p id="frmContactTitle" class="text-left"><?=$frmContactTitle?></p>
+						-->
+					</div>					
+<!--
+					<form id="contact-form" class="text-left form-horizontal" name="contact-form" action="sendmail.php" method="POST">
+						<fieldset>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-2">								
+										<label id="frmlblName" class="control-label" for="name"><?=$frmlblName?></label>
+									</div>
+									<div class="col-md-6">
+										<input id="frmName" name="name" class="form-control" maxlength="50" placeholder="<?=$frmName?>" type="text" required>
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">							
+									<div class="col-md-2">
+										<label id="frmlblSubject" for="subj"><?=$frmlblSubject?></label>
+									</div>
+									<div class="col-md-5">
+										<select name="subj" class="browser-default custom-select">
+											<option id="frmSubjOptTitle" value="" disabled><?=$frmSubjOptTitle?></option>
+											<option id="frmSubjOpt1" value="1" selected><?=$frmSubjOpt1?></option>
+											<option id="frmSubjOpt2" value="2"><?=$frmSubjOpt2?></option>
+										</select>
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">							
+									<div class="col-md-2">	
+										<label id="frmlblPhone" class="control-label" for="tel"><?=$frmlblPhone?></label>
+									</div>
+									<div class="col-md-3">
+										<input name="tel" class="form-control" maxlength="20" placeholder="+1(999)999-9999" type="text">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="row">						
+									<div class="col-md-2">	
+										<label id="frmlblMobile" class="control-label" for="cel"><?=$frmlblMobile?></label>
+									</div>
+									<div class="col-md-3">
+										<input name="cel" class="form-control" maxlength="20" placeholder="+1(999)999-9999" type="text">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="row">						
+									<div class="col-md-2">
+										<label class="control-label" for="email"><?=$frmlblEmail?></label>
+									</div>
+									<div class="col-md-6">
+										<input name="email" class="form-control"  maxlength="50" placeholder="<?=$frmphEmail?>" type="email" required="true">
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">						
+									<div class="col-md-2">
+										<label id="frmlblMsg" class="control-label" for="msg"><?=$frmlblMsg?></label>
+									</div>
+									<div class="col-md-8">
+										<textarea name="msg" class="form-control" maxlength="300" placeholder="<?=$frmphMsg?>" cols="150" type="text" required="true"></textarea>
+									</div>
+								</div>
+							</div>
+							
+							<div class="g-recaptcha" data-sitekey="6LcpCoIUAAAAAMHsy6aodZafvLFHlvIXLVnTTnv6" data-callback="EnableBtnSubmit"></div>
+							<br/>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+										<button id="btnSubmit" type="submit" class="btn btn-primary btn-lg info" disabled><?=$frmlblSubmit?></button>
+									</div>
+								</div>
+							</div>     
+						</fieldset>
+					</form>
+-->
+				</div>
+			</div>
+			<!--
+			<!- - Map - ->
+			<section id="contact" class="map">
+			  <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+			  <br/>
+			  <small>
+				<a href="../https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+			  </small>
+			</section>
+			-->
+		</section>
+		<footer class="footer text-center">
+			<div class="container">
+				<!--
+				<ul class="list-inline mb-5">
+				  <li class="list-inline-item">
+					<a class="social-link rounded-circle text-white mr-3" href="../#">
+					  <i class="icon-social-facebook"></i>
+					</a>
+				  </li>
+				  <li class="list-inline-item">
+					<a class="social-link rounded-circle text-white mr-3" href="../#">
+					  <i class="icon-social-twitter"></i>
+					</a>
+				  </li>
+				  <li class="list-inline-item">
+					<a class="social-link rounded-circle text-white" href="../#">
+					  <i class="icon-social-github"></i>
+					</a>
+				  </li>
+				</ul>
+				-->
+				<h3 class="py-5">© 2018 Enablitech</h3>
+			</div>
+		</footer>
+		
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+		  <i class="fas fa-angle-up"></i>
+		</a>
+		
+		<!-- Bootstrap core JavaScript -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Plugin JavaScript -->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Custom scripts for this template -->
+		<script src="js/stylish-portfolio.min.js"></script>
+		
+		<script>
+			window.onload = function(){
+				//document.getElementById("btnSubmit").disabled = true;
+				//document.getElementById("mnuMain").classList.replace("invisible","visible");
+				//document.getElementById("lang").classList.replace("invisible","visible");
+			}
+			
+			function EnableBtnSubmit(){
+				// //document.getElementById("btnSubmit").disabled = false;
+			}
+			/*
+			setTimeout(function(){				
+				var msgdiv = document.getElementById("msg");
+				msgdiv.parentNode.removeChild(msgdiv);
+			}, 5000);
+			*/
+		</script>
+	</body>
+
+</html>
