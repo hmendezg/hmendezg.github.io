@@ -15,15 +15,17 @@
 
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
 		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">		
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">		
+		
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">		 
+		
 		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">	
 		<link href="css/stylish-portfolio.css" rel="stylesheet">
-		
-		<script src='https://www.google.com/recaptcha/api.js'></script>
+				
+		<script src='https://www.google.com/recaptcha/api.js'></script> 
 		
 		<style>
 			#hdr{
-				margin-top: 20px!important;
+				margin-top: 15px!important;
 			}
 			@keyframes hidemsg{to{visibility:hidden;}}
 		</style>
@@ -35,7 +37,7 @@
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand">
 					<a id="mnuTitle" class="js-scroll-trigger" href="#page-top">Menu</a>
-				</li>
+				</li>		
 				<li class="sidebar-nav-item">
 					<a id="mnuOStart" class="js-scroll-trigger" href="#page-top">Start</a>
 				</li>
@@ -48,12 +50,8 @@
 			</ul>
 		</nav>
 		<header class="masthead">
-			<div id="lang" class="text-left">
-				<form id="frmLang" name="frmLang" action="cookieLang.php" method="POST">
-					<div class="form-group m-0 p-0" style="height:0px">
-						<input name="lang" class="form-control p-0 m-0 control-label invisible" value="<?=$tlang?>">
-					</div>
-				</form>
+			<div class="text-right" style="margin-right:50px">
+				<h4 id="lang" class="btn btn-sm m-1 text-dark bg-white" data-lang="en">Español</h4>
 			</div>
 			<div id="hdr" class="container text-center my-auto">
 				<div>
@@ -149,30 +147,64 @@ Training</strong>
 		  <i class="fas fa-angle-up"></i>
 		</a>
 		
-		<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- Plugin JavaScript -->
 		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-		<!-- Custom scripts for this template -->
 		<script src="js/stylish-portfolio.min.js"></script>
 		
 		<script>
-			window.onload = function(){
-				//document.getElementById("btnSubmit").disabled = true;
-				//document.getElementById("mnuMain").classList.replace("invisible","visible");
-				//document.getElementById("lang").classList.replace("invisible","visible");
+			window.onload = function(){				
+				//IE/SAFARI/OPERA/CHROME/FF
+				const lang = (window.navigator.userLanguage || 
+							  window.navigator.language).substring(0,2);
+
+				const localize = lang=>{
+					if(lang == 'es'){
+						$('#mnuTitle').html('Menú')
+						$('#mnuOStart').html('Inicio')
+						$('#mnuOProds').html('Productos')
+						$('#mnuOContact').html('Contacto')
+						
+						$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
+						$('#siteSlogan').html('Soluciones avanzadas para un aseguramiento enfocado en el valor empresarial')
+						
+						$('#prdITSA').html('Aplicación<br>IT Semantic Audit')
+						$('#prdITSA_desc').html('Software que facilita la realización de auditorías semánticas en todo tipo de orgaización habilitada por tecnología de información.')
+						$('#srvITSA').html('Auditoría<br>Semántica de TI')
+						$('#srvITSA_desc').html('Servicio de realización de auditorías semánticas al universo de segmentos de tecnología de información en organizaciones de todo tipo.')
+						$('#srvImpITSA').html('Implantación<br>y Capacitación')
+						$('#srvImpITSA_desc').html('Servicio de implantación de la metodología de auditoría semántica, incluyendo el uso del software IT Semantic Audit.')
+						
+						$('#lang').html('English')
+						$('#lang').data('lang',"es")
+					}else{
+						$('#mnuTitle').html('Menu')
+						$('#mnuOStart').html('Start')
+						$('#mnuOProds').html('Products')
+						$('#mnuOContact').html('Contact')
+						
+						$('#siteSubtitle').html('IT for the fullness of IT Governance')
+						$('#siteSlogan').html('Advanced solutions for assurance focused on business value')
+						
+						$('#prdITSA').html('IT Semantic Audit<br>Application')
+						$('#prdITSA_desc').html('Software that facilitates the performance of semantic audits in all types of organization enabled by information technology.')
+						$('#srvITSA').html('IT Semantic Audit<br>Service')
+						$('#srvITSA_desc').html('Service of conducting semantic audits to the universe of information technology segments in organizations of all kinds.')
+						$('#srvImpITSA').html('Implementation and<br>Training')
+						$('#srvImpITSA_desc').html('Implementation service of the semantic audit methodology, including the use of IT Semantic Audit software.')
+						
+						$('#lang').html('Español')
+						$('#lang').data('lang',"en")																	
+					}				
+				}
+
+				localize(lang)			
+
+				$('#lang').click(()=>{
+					let lng = $('#lang').data('lang');
+					lng == 'en'? localize('es'): localize('en')					
+				})
 			}
-			
-			function EnableBtnSubmit(){
-				// //document.getElementById("btnSubmit").disabled = false;
-			}
-			/*
-			setTimeout(function(){				
-				var msgdiv = document.getElementById("msg");
-				msgdiv.parentNode.removeChild(msgdiv);
-			}, 5000);
-			*/
 		</script>
 	</body>
 
