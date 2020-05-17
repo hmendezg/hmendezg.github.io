@@ -23,11 +23,6 @@ input{
   padding: 1.25rem 2.5rem;
 }
 
-.content-section {  
-  /*padding-top: 6rem;
-  padding-bottom: 12rem;*/
-}
-
 h1 {
 	font-size:2rem;
 }
@@ -85,32 +80,6 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.itsahead {
-	max-height: 10rem;
-	padding-top: 0rem;
-	padding-bottom: 1rem;
-}
-
-#hdr {
-	padding: 1rem;
-    background-color: slategrey;
-}
-
-#hdrlnk{
-	margin:0;
-	padding:0;
-	text-align:left;
-}
-
-#itsa_logo{
-	width:64px;
-	height:64px;
-	border-radius:50%;
-	background-color:whitesmoke;
-	padding-top:8px;
-	margin: 0 auto!important;
-}
 .masthead h1 {
   margin: 0;
   padding: 0;
@@ -123,19 +92,6 @@ h6 {
 
 .masthead h4 {
   color:white;
-}
-
-.hdrsubtitle {
-	margin-bottom: 0rem !important;
-}
-#siteSlogan{
-	margin:15px auto;
-	color: white !important;
-}
-.about-desc{
-	/*color:#808080;*/
-	margin-top:5px;
-	margin-bottom:5px;
 }
 
 #allbusdesc, #allproddesc{

@@ -24,20 +24,40 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script> 
 		
 		<style>
-			#d-lang{
-				margin-right: 80px
+			#hdr{
+				width: 90%;
+				padding: 1rem;
 			}
-			#mnuMain{				
+			#d-lang{
+				margin-left: 10px;
+				position: fixed;
+				z-index: 999
+			}
+			#mnuMain, #bscroll{				
 				width: 35px;
 				height: 35px;
-				line-height: 35px;
+				line-height: 35px;				
 			}
-			@keyframes hidemsg{to{visibility:hidden;}}
+			.my-title{
+				color: black !important;
+			}
+			.my-hdr-text{
+				color: black !important;
+				text-shadow: 4px 4px 10px white;
+			}
+			.itsahead {
+				max-height: 10rem;
+				padding-top: 0rem;
+				padding-bottom: 1rem;
+			}
 		</style>
 	</head>
 	
 	<body id="page-top">	
-		<a id="mnuMain" href="#" class="menu-toggle rounded mt-1 mr-4" name="mnuMain"><i class="fas fa-bars"></i></a>
+		<div id="d-lang" class="text-left">
+			<h4 id="lang" class="btn btn-sm mt-2 text-dark bg-white" data-lang="en">Es</h4>
+		</div>
+		<a id="mnuMain" href="#" class="menu-toggle bg-dark rounded mt-1 mr-2" name="mnuMain"><i class="fas fa-bars"></i></a>
 		<nav id="sidebar-wrapper">
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand">
@@ -54,19 +74,12 @@
 				</li>
 			</ul>
 		</nav>
-		<header class="masthead">
-			<div id="d-lang" class="text-right">
-				<h4 id="lang" class="btn btn-sm mt-2 text-dark bg-white" data-lang="en">Español</h4>
-			</div>
+		<header class="masthead pt-3">
 			<div id="hdr" class="container text-center my-auto">
 				<div>
-					<h1 class="mb-1 hdrtitle">Enablitech</h1>
-					<h3 class="mb-5 hdrsubtitle">
-						<span id="siteSubtitle">IT for the fullness of IT Governance</span>
-					</h3>
-					<h4>
-						<em id="siteSlogan">Advanced solutions for assurance focused on business value</em>
-					</h4>
+					<h1 class="my-hdr-text" id="hdrtitle">Enablitech</h1>
+					<h3 class="my-hdr-text" id="siteSubtitle">IT for the fullness of IT Governance</h3>
+					<h4 class="my-hdr-text" id="siteSlogan">Advanced solutions for assurance focused on business value</h4>
 				</div>
 			</div>
 			<div class="overlay"></div>
@@ -148,7 +161,7 @@ Training</strong>
 		</footer>
 		
 		<!-- Scroll to Top Button-->
-		<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+		<a id="bscroll" class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
 		  <i class="fas fa-angle-up"></i>
 		</a>
 		
@@ -180,7 +193,7 @@ Training</strong>
 						$('#srvImpITSA').html('Implantación<br>y Capacitación')
 						$('#srvImpITSA_desc').html('Servicio de implantación de la metodología de auditoría semántica, incluyendo el uso del software IT Semantic Audit.')
 						
-						$('#lang').html('English')
+						$('#lang').html('En')
 						$('#lang').data('lang',"es")
 					}else{
 						$('#mnuTitle').html('Menu')
@@ -198,7 +211,7 @@ Training</strong>
 						$('#srvImpITSA').html('Implementation and<br>Training')
 						$('#srvImpITSA_desc').html('Implementation service of the semantic audit methodology, including the use of IT Semantic Audit software.')
 						
-						$('#lang').html('Español')
+						$('#lang').html('Es')
 						$('#lang').data('lang',"en")																	
 					}				
 				}
