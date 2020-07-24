@@ -13,15 +13,17 @@
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
 		<link rel="icon" href="img/favicon.ico" type="image/ico">
 
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">		
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 		
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">		 
 		
-		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">	
+		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 		<link href="css/stylish-portfolio.css" rel="stylesheet">
 				
+		<!--
 		<script src='https://www.google.com/recaptcha/api.js'></script> 
+		-->
 		
 		<style>
 			#hdr{
@@ -50,6 +52,12 @@
 				padding-top: 0rem;
 				padding-bottom: 1rem;
 			}
+			.card-img-top {
+				width: 95px
+			}
+			.list-group-item{
+				min-height: 110px
+			}
 		</style>
 	</head>
 	
@@ -57,7 +65,9 @@
 		<div id="d-lang" class="text-left">
 			<h4 id="lang" class="btn btn-sm mt-2 text-dark bg-white" data-lang="en">Es</h4>
 		</div>
-		<a id="mnuMain" href="#" class="menu-toggle bg-dark rounded mt-1 mr-2" name="mnuMain"><i class="fas fa-bars"></i></a>
+		<a id="mnuMain" href="#" class="menu-toggle bg-dark rounded mt-1 mr-2" name="mnuMain">
+			<i class="fas fa-bars"></i>
+		</a>
 		<nav id="sidebar-wrapper">
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand">
@@ -83,57 +93,38 @@
 				</div>
 			</div>
 			<div class="overlay"></div>
-		</header>		
+		</header>
+
 		<section id="allbusdesc" class="content-section bg-primary text-black text-center py-4" id="services">
-			<div class="container">
-				<div class="content-section-heading"></div>
-				<div class="row">
-					<div class="col-md-4 mb-5 mb-lg-0">
-						<div>
-							<div>
-								<span class="service-icon rounded-circle mx-auto mb-3">
-									<i class="icon-screen-desktop"></i>
-								</span>
+			<section class="container-fluid">
+    			<div class="row justify-content-center">
+            		<div class="col-sm-4 col-xs-6 d-flex align-items-stretch mb-4">
+						<div class="card">
+							<img src="img/itsa.png" class="card-img-top img-fluid img-responsive mx-auto pt-2" alt="...">
+							<div class="card-body m-0 p-0 pt-2">
+								<h5 class="card-title">IT Semantic Audit</h5>
 							</div>
-							<div style="vertical-align: bottom;">
-								<h4><strong id="prdITSA">IT Semantic Audit
-Application</strong></h4>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<p id="prdITSA" class="card-text">Solution to conducting IT semantic audits in all types of organization.</p>
+								</li>
+							</ul>
+						</div>
+                	</div>
+            		<div class="col-sm-4 col-xs-6 d-flex align-items-stretch mb-4">
+						<div class="card">
+							<img src="img/dms.png" class="card-img-top img-fluid img-responsive mx-auto pt-2" alt="...">
+							<div class="card-body m-0 p-0 pt-2">
+								<h5 class="card-title">Document Repository System</h5>
 							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<p id="prdDMS" class="card-text">Extract content, storing, access control, and search processed documents.</p>
+								</li>
+							</ul>							
 						</div>
-						<div>
-							<p id="prdITSA_desc">Software that facilitates the performance of semantic audits in all types of organization enabled by information technology.</p>
-						</div>
-					</div>
-					<div class="col-md-4 mb-5 mb-lg-0">
-						<div>
-							<span class="service-icon rounded-circle mx-auto mb-3">
-								<i class="icon-magnifier"></i>
-							</span>
-							<h4>
-								<strong id="srvITSA">IT Semantic Audit
-Service</strong>
-							</h4>
-						</div>
-						<div>
-							<p class="mb-0" id="srvITSA_desc">Service of conducting semantic audits to the universe of information technology segments in organizations of all kinds.</p>
-						</div>
-					</div>
-					<div class="col-md-4 mb-5 mb-lg-0">
-						<div>
-							<span class="service-icon rounded-circle mx-auto mb-3">
-								<i class="icon-book-open"></i>
-							</span>
-							<h4>
-								<strong id="srvImpITSA">Implementation and
-Training</strong>
-							</h4>
-						</div>
-						<div>
-							<p class="mb-0" id="srvImpITSA_desc">Implementation service of the semantic audit methodology, including the use of IT Semantic Audit software.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+                	</div>
+				</div>					
 		</section>
 
 		<section id="contact" class="content-section py-4">
@@ -184,15 +175,11 @@ Training</strong>
 						$('#mnuOContact').html('Contacto')
 						
 						$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
-						$('#siteSlogan').html('Soluciones avanzadas de TI para la gestión, gobernanza y aseguramiento de TI enfocados en el valor empresarial')
+						$('#siteSlogan').html('Soluciones avanzadas para la gestión, gobernanza y aseguramiento de TI enfocados en el valor empresarial')
 						
-						$('#prdITSA').html('Aplicación<br>IT Semantic Audit')
-						$('#prdITSA_desc').html('Software que facilita la realización de auditorías semánticas en todo tipo de orgaización habilitada por tecnología de información.')
-						$('#srvITSA').html('Auditoría<br>Semántica de TI')
-						$('#srvITSA_desc').html('Servicio de realización de auditorías semánticas al universo de segmentos de tecnología de información en organizaciones de todo tipo.')
-						$('#srvImpITSA').html('Implantación<br>y Capacitación')
-						$('#srvImpITSA_desc').html('Servicio de implantación de la metodología de auditoría semántica, incluyendo el uso del software IT Semantic Audit.')
-						
+						$('#prdITSA').html('Solución para la realización auditorías semánticas de TI en todo tipo de organización.')
+						$('#prdDMS').html('Extracción de contenido, almacenamiento, control de acceso y búsqueda de documentos procesados.')
+
 						$('#lang').html('En')
 						$('#lang').data('lang',"es")
 					}else{
@@ -202,15 +189,11 @@ Training</strong>
 						$('#mnuOContact').html('Contact')
 						
 						$('#siteSubtitle').html('IT for the fullness of IT Governance')
-						$('#siteSlogan').html('Advanced IT solutions for IT management, IT governance and IT assurance focused on business value')
+						$('#siteSlogan').html('Advanced solutions for IT management, IT governance and IT assurance focused on business value')
 						
-						$('#prdITSA').html('IT Semantic Audit<br>Application')
-						$('#prdITSA_desc').html('Software that facilitates the performance of semantic audits in all types of organization enabled by information technology.')
-						$('#srvITSA').html('IT Semantic Audit<br>Service')
-						$('#srvITSA_desc').html('Service of conducting semantic audits to the universe of information technology segments in organizations of all kinds.')
-						$('#srvImpITSA').html('Implementation and<br>Training')
-						$('#srvImpITSA_desc').html('Implementation service of the semantic audit methodology, including the use of IT Semantic Audit software.')
-						
+						$('#prdITSA').html('Solution to conducting IT semantic audits in all types of organization.')
+						$('#prdDMS').html('Extract content, storing, access control, and search processed documents.')
+
 						$('#lang').html('Es')
 						$('#lang').data('lang',"en")																	
 					}				
