@@ -58,6 +58,12 @@
 			.list-group-item{
 				min-height: 110px
 			}
+			
+			@media (min-width: 768px){
+				#siteSlogan{				
+					margin:0 130px; 
+				}
+			}
 		</style>
 	</head>
 	
@@ -85,7 +91,7 @@
 			</ul>
 		</nav>
 		<header class="masthead pt-3">
-			<div id="hdr" class="container text-center my-auto">
+			<div id="hdr" class="container-fluid text-center my-auto">
 				<div>
 					<h1 class="my-hdr-text" id="hdrtitle">Enablitech</h1>
 					<!--<h3 class="my-hdr-text" id="siteSubtitle">IT for the fullness of IT Governance</h3>-->
@@ -175,7 +181,7 @@
 						$('#mnuOContact').html('Contacto')
 						
 						$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
-						$('#siteSlogan').html('Soluciones avanzadas para la gestión, gobernanza y aseguramiento de TI enfocados en el valor empresarial')
+						$('#siteSlogan').html('Soluciones avanzadas para la gestión, gobernanza y aseguramiento de TI enfocadas en el valor empresarial')
 						
 						$('#prdITSA').html('Solución para la realización auditorías semánticas de TI en todo tipo de organización.')
 						$('#prdDMS').html('Extracción de contenido, almacenamiento, control de acceso y búsqueda de documentos procesados.')
