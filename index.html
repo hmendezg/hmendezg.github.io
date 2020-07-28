@@ -20,50 +20,14 @@
 		
 		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 		<link href="css/stylish-portfolio.css" rel="stylesheet">
+
+		<link href="css/index.css" rel="stylesheet">
 				
 		<!--
 		<script src='https://www.google.com/recaptcha/api.js'></script> 
 		-->
 		
 		<style>
-			#hdr{
-				width: 90%;
-				padding: 1rem;
-			}
-			#d-lang{
-				margin-left: 10px;
-				position: fixed;
-				z-index: 999
-			}
-			#mnuMain, #bscroll{				
-				width: 35px;
-				height: 35px;
-				line-height: 35px;				
-			}
-			.my-title{
-				color: white !important;
-			}
-			.my-hdr-text{
-				color: white !important;
-				/*text-shadow: 4px 4px 10px white;*/
-			}
-			.itsahead {
-				max-height: 10rem;
-				padding-top: 0rem;
-				padding-bottom: 1rem;
-			}
-			.card-img-top {
-				width: 95px
-			}
-			.list-group-item{
-				min-height: 140px
-			}
-			
-			@media (min-width: 768px){
-				#siteSlogan{				
-					margin:0 130px; 
-				}
-			}
 		</style>
 	</head>
 	
@@ -104,32 +68,32 @@
 		<section id="allbusdesc" class="content-section bg-primary text-black text-center py-4" id="services">
 			<section class="container-fluid">
     			<div class="row justify-content-center">
-            		<div class="col-sm-4 col-xs-6 d-flex align-items-stretch mb-4">
-						<div class="card">
-							<img src="img/itsa.png" class="card-img-top img-fluid img-responsive mx-auto pt-2" alt="...">
-							<div class="card-body m-0 p-0 pt-2">
-								<h5 class="card-title">IT Semantic Audit</h5>
-							</div>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">
-									<p id="prdITSA" class="card-text">Realization of IT semantic audits in all types of organizations.</p>
-								</li>
-							</ul>
-						</div>
-                	</div>
-            		<div class="col-sm-4 col-xs-6 d-flex align-items-stretch mb-4">
-						<div class="card">
-							<img src="img/dms.png" class="card-img-top img-fluid img-responsive mx-auto pt-2" alt="...">
-							<div class="card-body m-0 p-0 pt-2">
-								<h5 class="card-title">Document Repository System</h5>
-							</div>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">
-									<p id="prdDMS" class="card-text">Content extraction, secure storing, access control, and searching of processed documents.</p>
-								</li>
-							</ul>							
-						</div>
-                	</div>
+            <div class="col-sm-4 col-xs-6 d-flex align-items-stretch mb-4">
+				<div class="card">
+					<img src="img/itsa.png" class="card-img-top img-fluid img-responsive mx-auto pt-2" alt="...">
+					<div class="card-body m-0 p-0 pt-2">
+						<h5 class="card-title">IT Semantic Audit</h5>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<p id="prdITSA" class="card-text">Realization of IT semantic audits in all types of organizations.</p>
+						</li>
+					</ul>
+				</div>
+            </div>
+            <div class="col-sm-4 col-xs-6 d-flex align-items-stretch mb-4">
+				<div class="card">
+					<img src="img/dms.png" class="card-img-top img-fluid img-responsive mx-auto pt-2" alt="...">
+					<div class="card-body m-0 p-0 pt-2">
+						<h5 class="card-title">Document Repository System</h5>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<p id="prdDMS" class="card-text">Content extraction, secure storing, access control, and searching of processed documents.</p>
+						</li>
+					</ul>							
+				</div>
+            </div>
 				</div>					
 		</section>
 
@@ -166,53 +130,8 @@
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 		<script src="js/stylish-portfolio.min.js"></script>
-		
-		<script>
-			window.onload = function(){				
-				//IE/SAFARI/OPERA/CHROME/FF
-				const lang = (window.navigator.userLanguage || 
-							  window.navigator.language).substring(0,2);
 
-				const localize = lang=>{
-					if(lang == 'es'){
-						$('#mnuTitle').html('Menú')
-						$('#mnuOStart').html('Inicio')
-						$('#mnuOProds').html('Productos')
-						$('#mnuOContact').html('Contacto')
-						
-						$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
-						$('#siteSlogan').html('Soluciones avanzadas para la gestión, gobernanza y aseguramiento de TI enfocadas en el valor empresarial')
-						
-						$('#prdITSA').html('Aplicación web para la realización de auditorías semánticas de TI en todo tipo de organización.')
-						$('#prdDMS').html('Aplicación web para la extracción de contenido, almacenamiento seguro, control de acceso y búsqueda de documentos procesados.')
-
-						$('#lang').html('En')
-						$('#lang').data('lang',"es")
-					}else{
-						$('#mnuTitle').html('Menu')
-						$('#mnuOStart').html('Start')
-						$('#mnuOProds').html('Products')
-						$('#mnuOContact').html('Contact')
-						
-						$('#siteSubtitle').html('IT for the fullness of IT Governance')
-						$('#siteSlogan').html('Advanced solutions for IT management, IT governance and IT assurance focused on business value')
-						
-						$('#prdITSA').html('Web application for the realization of IT semantic audits in all types of organizations.')
-						$('#prdDMS').html('Web application for content extraction, secure storing, access control, and searching of processed documents.')
-
-						$('#lang').html('Es')
-						$('#lang').data('lang',"en")																	
-					}				
-				}
-
-				localize(lang)			
-
-				$('#lang').click(()=>{
-					let lng = $('#lang').data('lang');
-					lng == 'en'? localize('es'): localize('en')					
-				})
-			}
-		</script>
+		<script src="js/index.js"></script>
 	</body>
 
 </html>
