@@ -12,6 +12,8 @@ window.onload = function(){
 			$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
 			$('#siteSlogan').html('Soluciones avanzadas para la gestión, gobernanza y aseguramiento de TI enfocadas en el valor empresarial')
 			
+			$('#itaudit_service').html('Auditoría de TI')
+			$('#itaudit_service_desc').html('Servicio de realización de auditorías de sistemas automatizados en todo tipo de organización.')
 			$('#prdITSA').html('Aplicación web para la realización de auditorías semánticas de TI en todo tipo de organización.')
 			$('#prdDMS').html('Aplicación web para la extracción de contenido, almacenamiento seguro, control de acceso y búsqueda de documentos procesados.')
 
@@ -23,6 +25,8 @@ window.onload = function(){
 			$('#mnuOProds').html('Products')
 			$('#mnuOContact').html('Contact')
 			
+			$('#itaudit_service').html('IT Audit')
+			$('#itaudit_service_desc').html('IT audit service in all types of organizations.')
 			$('#siteSubtitle').html('IT for the fullness of IT Governance')
 			$('#siteSlogan').html('Advanced solutions for IT management, IT governance and IT assurance focused on business value')
 			
