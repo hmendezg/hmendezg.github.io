@@ -6,7 +6,7 @@ window.onload = function(){
 		if(lang == 'es'){
 			$('#mnuTitle').html('Menú')
 			$('#mnuOStart').html('Inicio')
-			$('#mnuOProds').html('Productos')
+			$('#mnuOProds').html('Portafolio')
 			$('#mnuOContact').html('Contacto')
 			
 			$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
@@ -22,7 +22,7 @@ window.onload = function(){
 		}else{
 			$('#mnuTitle').html('Menu')
 			$('#mnuOStart').html('Start')
-			$('#mnuOProds').html('Products')
+			$('#mnuOProds').html('Portfolio')
 			$('#mnuOContact').html('Contact')
 			
 			$('#itaudit_service').html('IT Audit')
