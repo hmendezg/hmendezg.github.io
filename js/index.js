@@ -44,4 +44,7 @@ window.onload = function(){
 		let lng = $('#lang').data('lang');
 		lng == 'en'? localize('es'): localize('en')					
 	})
+
+	//mediumZoom(document.getElementById('brochure-p2'))
+	mediumZoom('[data-zoomable]')
 }
