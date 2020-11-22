@@ -26,7 +26,7 @@ window.onload = function(){
 			$('#mnuOContact').html('Contact')
 			
 			$('#itaudit_service').html('IT Audit')
-			$('#itaudit_service_desc').html('IT audit service in all types of organizations.')
+			$('#itaudit_service_desc').html('Service for conducting audits of automated systems in all types of organizations.')
 			$('#siteSubtitle').html('IT for the fullness of IT Governance')
 			$('#siteSlogan').html('Advanced solutions for IT management, IT governance and IT assurance focused on business value')
 			
@@ -38,7 +38,8 @@ window.onload = function(){
 		}				
 	}
 
-	localize(lang)			
+	//localize(lang)
+	localize("es")
 
 	$('#lang').click(()=>{
 		let lng = $('#lang').data('lang');
