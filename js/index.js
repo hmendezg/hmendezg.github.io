@@ -10,7 +10,7 @@ window.onload = function(){
 			$('#mnuOContact').html('Contacto')
 			
 			$('#siteSubtitle').html('TI para la plenitud de la Gobernanza de TI')
-			$('#siteSlogan').html('Soluciones avanzadas para la gestión, gobernanza y aseguramiento de TI enfocadas en el valor empresarial')
+			$('#siteSlogan').html('Soluciones tecnológicas avanzadas para individuos, hogares y empresas')
 			
 			$('#itaudit_service').html('Auditoría de TI')
 			$('#itaudit_service_desc').html('Servicio de realización de auditorías de sistemas automatizados en todo tipo de organización.')
@@ -28,7 +28,7 @@ window.onload = function(){
 			$('#itaudit_service').html('IT Audit')
 			$('#itaudit_service_desc').html('Service for conducting audits of automated systems in all types of organizations.')
 			$('#siteSubtitle').html('IT for the fullness of IT Governance')
-			$('#siteSlogan').html('Advanced solutions for IT management, IT governance and IT assurance focused on business value')
+			$('#siteSlogan').html('Advanced technology solutions for individuals, homes and businesses')
 			
 			$('#prdITSA').html('Web application for the realization of IT semantic audits in all types of organizations.')
 			$('#prdDMS').html('Web application for content extraction, secure storing, access control, and searching of processed documents.')
