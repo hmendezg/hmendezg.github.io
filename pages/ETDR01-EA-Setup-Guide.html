@@ -39,23 +39,27 @@
 <p><em>IMPORTANT!</em></p>
 <p>Each time the ETDR01-EA turns on, its try to connect the configured SSID as an station (STA) with stored WiFi credentials provided by user.<br>
 If no credentials stored or credentials changed after the setup, in 30 seconds it create an AP on 192.168.4.1 to let the owner user configure the WiFi credentials and other settings.</p>
-<p><strong>Step 4 - Test the Attendance Control</strong></p>
+<p><strong>Step 5 - Test the Attendance Control</strong></p>
 <p>Stand in front of the device and press the shutter button. As soon as you bring your finger close to the device, it will detect it and perform the registration by taking a photo.</p>
 <p>To verify the new attendance record, browse to the new device’s IP Address, and login with the user Admin and changed password.  Next, click or tap on the Photo Files List. This option shows the last photos taken. Verify that the file name corresponds to the date time when was the attendance.  If the date and time is different, this means that you need to change the Time Zone parameter on the device as shown next.</p>
-<p><strong>Step 5 - Change the Time Zone</strong></p>
+<p><strong>Step 6 - Change the Time Zone</strong></p>
 <p>Click or tap on Settings; on the Time Zone Field type de code corresponding to your place. This code is available from the URL provided near the field.</p>
-<p><strong>Step 6 - Led Flash Enabled</strong></p>
+<p><strong>Step 7 - Led Flash Enabled</strong></p>
 <p>By default, the device turn on the led flash light to take photos. This may be unnecessary if there is a very well light environment or is inconvenient for the regular user. If this is the case, click or tap on Settings, deselect the checkbox named Led Flash Enabled field, and click or tap on Apply.</p>
-<p><strong>Step 7 - IOT Web Server Enabled</strong></p>
+<p><strong>Step 8 - IOT Web Server Enabled</strong></p>
 <p>The ETDR01-EA can notify a server every time someone attend. This enables post-processing of the event, for which the administrator must configure the following parameters:</p>
-<p>Web Server Post Domain<br>
-It is the Web Server Post URL to be notified<br>
-Web Server Post Port<br>
-It is the port on the Web Server to be notified<br>
-Web Server Post Path<br>
-It is the path on the Web Server to be notified<br>
-Web Server Post UUID<br>
-It is a key the Web Server to be notified can validate</p>
+<p>Web Server Post Domain</p>
+<pre><code>URL to be notified
+</code></pre>
+<p>Web Server Post Port</p>
+<pre><code>Port on the Web Server to be notified
+</code></pre>
+<p>Web Server Post Path</p>
+<pre><code>Path on the Web Server URL to be notified
+</code></pre>
+<p>Web Server Post UUID</p>
+<pre><code>Key the Web Server to be notified can validate
+</code></pre>
 <p>For this configuration to take place, the IOT Web Server Enabled parameter must be activated.</p>
 <p><strong>Troubleshutting</strong></p>
 <ol>
