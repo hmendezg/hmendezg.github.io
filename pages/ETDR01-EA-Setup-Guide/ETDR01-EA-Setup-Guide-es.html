@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETDR01-EA-Guía-de-Configuración</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="enablitech-attendace-control-etdr01-ea-br-setup-guide">Enablitech Attendace Control (ETDR01-EA) <br>Guía de Configuración</h1>
+<p><strong>Intro</strong></p>
+<p>El Attendance Control (ETDR01-EA) es un dispositivos IOT que provee a las organizaciones y a los hogares un registro de asistencia mediante autofotos fechadas. Dispone de una interfaz Web que facilita su configuración, gestión y visualiación del registro actualizado a la fecha.</p>
+<p>Para realizar estos pasos de configuración del ETDR01-EA se requiere de un dispositivo cliente (una PC, laptop o smartphone) con capacidad de acceso WiFi.</p>
+<p><strong>Paso 1 - Encender el ETDR01-EA</strong></p>
+<p>Conecte un extremo del cordón de electricidad provisto a la fuente de alimentación más cercana, y el otro extremos a la entrada del ETDR01-EA.</p>
+<!--<p><img src="https://embed.creately.com/kqGSQt3g7lp?token=pkobxxffjYLqi839&amp;type=svg" alt="ETDR01-EA + power cord"></p>-->
+<p><img src="ETDR01-EA-setup-step1.png" alt="ETDR01-EA + power cord"></p>
+<p>Cuando el ETDR01-EA está conectado, ejecuta una secuencia de inicio, la cual es indicatda mediante el encendido de la luz led flash, que se apaga una vez que el proceso de inicio finaliza.</p>
+<p><strong>Paso 2 - Conectar el dispositivo cliente al Punto de Acceso WiFi del ETDR01-EA</strong></p>
+<p>Por primera vez (y siempre que las credenciales del Punto de Acceso WiFi del router cambien), el ETDR01-EA hace disponible un Punto de Acceso WiFi (AP) para permitir la configuración inicial. Este AP es accessible a través de la dirección IP 192.168.4.1.</p>
+<!--
+<p><img src="https://embed.creately.com/VNtYEJBOMWb?token=go0Iz9n8hj64UkdY&amp;type=svg" alt="ETDR01-EA as WiFi AP"></p>
+-->
+<p><img src="ETDR01-EA-setup-step2.png" alt="ETDR01-EA as WiFi AP"></p>
+<p>Desde el dispositivo cliente (PC, laptop o smartphone), conecte al Punto de Acceso (AP) nombrado ETDR01-###############. La frase de clave es 12345678.</p>
+<p>¡IMPORTANTE!</p>
+<p>La última parte del hostname del AP provisto por el dispositivo ETDR01-EA (##############) es el número serial del dispositivo. Asegúrese de recordar cómo encontrarlo tal y como se ha indicado en este paso o retorne a este paso siempre que necesite obtenerlo.</p>
+<p>Más adelante, este número podrá ser encontrado en la página web del dispositivo, en la ruta Configuration-&gt;Device status-&gt;Serial number, pero para esto necesitará el password por defecto, que es el número de serie del dispositivo, así que mejor asegúrese de recordar cómo encontrarlo, tal y como se indica en este paso, o retorne a este paso siempre que necesite saber cómo obtenerlo.</p>
+<p><strong>Step 3 - Configuración Inicial</strong></p>
+<p>Una vez que haya conectado su dispositivo cliente al AP del ETDR01-EA, abra el navegador en su dispositivo cliente y navegue a la dirección IP 192.168.4.1.</p>
+<p>En la pagina Login, entre Admin en el campo Nombre de Ususario, y entre el número serial en el campo Password.</p>
+<p>El navegador muestra el menú principal. Desde ahí, haga clic o tap en la opción Change Password. Asegúrese de seleccionar un buen password.</p>
+<p>A seguidas, haga clic o tap en la opción WiFi Connection, para configurar el acceso WiFi al Punto de Acceso del router de la red local.</p>
+<p>Desde la lista mostrada en la página seleccione el SSID del Punto de Acceso (AP) de la red local, y entre la frase clave correspondiente.</p>
+<p>Active Restart Now para que la nueva conexión WiFi y el nuevo password sean activados.</p>
+<p><strong>Paso 4 - Encuentre la nueva dirección IP assignada al ETDR01-EA</strong></p>
+<p>Despues de reiniciar, el ETDR01-EA se connecta al AP de la red local con las credenciales provistas.</p>
+<p>Si logra conectarse, el escenario cambia a este contexto:</p>
+<!--<p><img src="https://embed.creately.com/vHyDLlT4IMM?token=OtOvs8WmXQMQztVT&amp;type=svg" alt="ETDR01-EA as WiFi STA"></p>-->
+<p><img src="ETDR01-EA-setup-step4.png" alt="ETDR01-EA as WiFi STA"></p>
+<p>Para accesar al servidor web del ETDR01-EA, página titulada Setup and Info, el usuario necesita saber la nueva dirección IP assignada por el router de la red local.</p>
+<p>La nueva dirección IP puede ser obtenida a través de la página de configuración del router, buscando el dispositivo por el nombre de host ETDR01-###########, o mediante un programa escanner de redes.</p>
+<p><em>¡IMPORTANTE!</em></p>
+<p>Cada vez que conecte el ETDR01-EA, el intentará conectarse como estación al Punto de Acceso WiFi (AP) con las credenciales WiFi que almacena, las cuales fueron provistas por el usuario.</p>
+<p>Si no dispone de credenciales o estas han cambiado en algún momento después de la configuración, en 30 segundos procederá crear un Punto de Acceso (AP) propio con la dirección IP 192.168.4.1, para permitir al usuario configurar las credenciales WiFi, así como otras configuraciones.</p>
+<p><strong>Paso 5 - Probar el Attendance Control</strong></p>
+<p>Parese en frente del dispositivo y presione con un dedo el botón disparador (no es necesario tocarlo, ya que este detectará el acercamiento y reaccionará en consecuencia). Tan pronto como acerque su dedo al botón disparador, el ETDR01-EA procederá a encender la luz del flash, a tomar una foto y a realizar el registro correspondiente.</p>
+<p>Para verificar el nuevo registro de asistencia, navegue a la dirección IP del dispositivo y entre con las credenciales Admin y password. A seguidas, hága clic o tap en la opción Photo Files List. Esta opción muestra las últimas fotos tomadas. Verifique que el nombre del archivo corresponda a la fecha y hora en que se tomó la foto de prueba de registro asistencia. Si la fecha y hora es distinta a la correcta, eso quiere decir que necesita cambiar el parámetro Time Zone  en la configuración del dispositivo. Esto se hace en el siguiente paso.</p>
+<p><strong>Paso 6 - Cambiar el Time Zone</strong></p>
+<p>Clic o tap en Settings; en el campo Time Zone Field escriba el code correspondiente al lugar en que se encuentra. Este código está disponible desde la URL provista a continuación del campo.</p>
+<p><strong>Paso 7 - Led Flash Enabled</strong></p>
+<p>por defecto, el dispositivo enciende la luz led de flash para tomar las fotos. Esto puede que no sea necesario si en la sala hay una excelente iluminación o si resulta inconveniente para el usuario regular. If es el caso, haga clic o tap en Settings, desactive la caja de chequeo nombrada Led Flash Enabled, y clic o tap en Apply.</p>
+<p><strong>Paso 8 - IOT Web Server Enabled</strong></p>
+<p>El ETDR01-EA tiene la capacidad de notificar un servidor cada vez que alguien se pone presente. Esto habilita  el post-procesamiento del event, para el cual el usuario administrador debe configurar los siguientes parámetros:</p>
+<p>Web Server Post Domain</p>
+<pre><code>URL a ser notificada
+</code></pre>
+<p>Web Server Post Port</p>
+<pre><code>Puerto del Web Server a ser notificado
+</code></pre>
+<p>Web Server Post Path</p>
+<pre><code>Ruta del Web Server a ser notificado
+</code></pre>
+<p>Web Server Post UUID</p>
+<pre><code>Código clave que puede ser validado por Web Server a ser notificado
+</code></pre>
+<p>Para que esta configuración tenga lugar, el parámetro IOT Web Server Enabled debe ser activado.</p>
+<p><strong>Solución de Problemas</strong></p>
+<ol>
+<li>
+<p>No se conecta al WiFi de la red local</p>
+<p>Verifique que las credenciales del WiFi de la red local no hayan cambiado. Si es el caso, el dispositivo ETDR01-EA  intenta conectarse con credenciales incorrectas, por lo que se comporta según se describe en el paso 2.</p>
+</li>
+<li>
+<p>No toma nuevas fotos</p>
+<p>Puede ser que no quede más espacio disponible en el ETDR01-EA. Verifique este dato en Settings->Device State, en el dato titulado Free Bytes. Si este es el caso, elimine los registro que ya no necesite o todos según considere. Esto lo puede hacer mediante las opciones Photo Files List y Delete All Photo Files</p>
+</li>
+<li>
+<p>El dispositivo no inicia o se mantiene reiniciando</p>
+<p>Verifique la conección del cordón de alimentación (PSU) y la toma de electricidad de la pared.</p>
+</li>
+<li>
+<p>Señal Wi-Fi débil.</p>
+<p>El dispositivo requiere una buena señal WiFi para una óptima operación, por lo que debe ser ubicado lo más cerca posible del router WiFi.</p>
+</li>
+<li>
+<p>No recuerdo las credenciales de acceso al web server.</p>
+<p>Este caso requiere reiniciar el dispositivo, con lo que se perderán las fotos y los parámetros de configuración. Para reiniciar el dispositivo, debe emplear el usuario Admin y el password por defecto, el cual es la segunda parte del nombre de host del dispositivo. Acceda con estas credenciales; la página web preguntará si quiere reiniciar los parámetros a sus valores originales y eliminar todos los registros a la fecha. Si responde afirmativamente, el dispositivo queda reiniciado, y para reconfigurarlo deberá ir al paso número 1 de esta guía.</p>
+</li>
+</ol>
+<p><sup>Actualizado el 2021-02-21</sup></p>
+<p>Para más detalles y asistencia, no dude en contactarnos en <a href="http://www.enablitech.com">www.enablitech.com</a></p>
+</div>
+</body>
+
+</html>
