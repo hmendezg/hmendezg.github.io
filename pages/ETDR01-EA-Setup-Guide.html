@@ -1,0 +1,73 @@
+﻿<h1 id="how-to-configure-the-attendace-control-iot-device">How to Configure the Attendace Control IOT device?</h1>
+<p><strong>Intro</strong></p>
+<p>The Attendance Control (ETDR01-EA) is an IOT device that allows businesses and households to keep a record of attendance using dated selfies. It provides a web interface that allows its configuration, maintenance and visualization of the attendance record to date.</p>
+<p>To configure the ETDR01-EA it is required one of the following client device with WiFi access capability: a PC, laptop or smartphone.</p>
+<p><strong>Step 1 - Turn on the ETDR01-EA</strong></p>
+<p>Connect the provided power cord to the ETDR01-EA device and from the nearest outlet.</p>
+<p><img src="https://embed.creately.com/kqGSQt3g7lp?token=pkobxxffjYLqi839&amp;type=svg" alt="enter image description here"></p>
+<p>When the ETDR01-EA is connected, it initiates a sequence indicated by turning on the led flash light that turns off after finishing the startup process.</p>
+<p><strong>Step 2 - Connect to the WiFi Access Point</strong></p>
+<p>For the first time, the ETDR01-EA makes available an WiFi Access Point   (AP) to allow the initial configuration. This AP is accessible through the IP address 192.168.4.1.</p>
+<p><img src="https://embed.creately.com/VNtYEJBOMWb?token=go0Iz9n8hj64UkdY&amp;type=svg" alt="enter image description here"></p>
+<p>From your client device (PC, laptop or smartphone), connect to the Access Point named ETDR01-###############. The pass phrase it is 12345678.</p>
+<p>Important!</p>
+<p>The last part of the ETDR01-EA device name (##############) it is the serial number of the device. Make a note of this number as it is the default password for the initial login.</p>
+<p><strong>Step 3 - Initial Configuration</strong></p>
+<p>Once your client device has connected to the AP, open the browser and navigate to the IP address 192.168.4.1.</p>
+<p>On the Login page, enter Admin in the username field, and the annotated serial number in the password field.</p>
+<p>The browser shows the dashboard. From this, click or tap on Change Password option. Make sure to select a good password.</p>
+<p>Next, click or tap on WiFi Connection to configure the WiFi access to the local area network router.</p>
+<p>From the list box shown on the page, select the SSID of your network, and enter the corresponding pass phrase.</p>
+<p>Select Restart Now so the new WiFi connection and the new admin’s password takes effect.</p>
+<p><strong>Step 4 - Find the new IP Address Assigned</strong></p>
+<p>After reboot, the ETDR01-EA connects with the provided WiFi credentials.</p>
+<p>The scenario changes to this context:</p>
+<p><img src="https://embed.creately.com/vHyDLlT4IMM?token=OtOvs8WmXQMQztVT&amp;type=svg" alt="enter image description here"></p>
+<p>To access the ETDR01-EA Setup and Info page, the user needs to know the new dynamic IP Address assigned by the router to the ETDR01-EA device.</p>
+<p>To obtain the new assigned IP Address, the user can do it on the router’s configuration page finding the ETDR01-########### host name, or using a network scanner program.</p>
+<p><em>IMPORTANT!</em></p>
+<p>Each time the ETDR01-EA turns on, its try to connect the configured SSID as an station (STA) with stored WiFi credentials provided by user.<br>
+If no credentials stored or credentials changed after the setup, in 30 seconds it create an AP on 192.168.4.1 to let the owner user configure the WiFi credentials and other settings.</p>
+<p><strong>Step 4 - Test the Attendance Control</strong></p>
+<p>Stand in front of the device and press the shutter button. As soon as you bring your finger close to the device, it will detect it and perform the registration by taking a photo.</p>
+<p>To verify the new attendance record, browse to the new device’s IP Address, and login with the user Admin and changed password.  Next, click or tap on the Photo Files List. This option shows the last photos taken. Verify that the file name corresponds to the date time when was the attendance.  If the date and time is different, this means that you need to change the Time Zone parameter on the device as shown next.</p>
+<p><strong>Step 5 - Change the Time Zone</strong></p>
+<p>Click or tap on Settings; on the Time Zone Field type de code corresponding to your place. This code is available from the URL provided near the field.</p>
+<p><strong>Step 6 - Led Flash Enabled</strong></p>
+<p>By default, the device turn on the led flash light to take photos. This may be unnecessary if there is a very well light environment or is inconvenient for the regular user. If this is the case, click or tap on Settings, deselect the checkbox named Led Flash Enabled field, and click or tap on Apply.</p>
+<p><strong>Step 7 - IOT Web Server Enabled</strong></p>
+<p>The ETDR01-EA can notify a server every time someone attend. This enables post-processing of the event, for which the administrator must configure the following parameters:</p>
+<p>Web Server Post Domain<br>
+It is the Web Server Post URL to be notified<br>
+Web Server Post Port<br>
+It is the port on the Web Server to be notified<br>
+Web Server Post Path<br>
+It is the path on the Web Server to be notified<br>
+Web Server Post UUID<br>
+It is a key the Web Server to be notified can validate</p>
+<p>For this configuration to take place, the IOT Web Server Enabled parameter must be activated.</p>
+<p><strong>Troubleshutting</strong></p>
+<ol>
+<li>
+<p>Failed to connect to WiFi</p>
+<p>Verify that the WiFi credentials have not changed. If the case update it!</p>
+</li>
+<li>
+<p>Camera does not takes photos</p>
+<p>It may be that there is no more space available. Check Free Bytes 		on Settings - Device State</p>
+</li>
+<li>
+<p>Device cannot start or reboots</p>
+<p>Check the PSU connection to the power wall.</p>
+</li>
+<li>
+<p>Weak Wi-Fi Signal.</p>
+<p>The device needs a good WiFi signal, so it should be located as close as possible to the router.</p>
+</li>
+<li>
+<p>Do not remember the username and Admin password.</p>
+<p>This case requires resetting the device. To do a reset, you must use the password that the device comes from the factory, which is the second part of the device’s host name. Login with the Admin user and the default password; The device will ask if you want to reset the parameters to their original values. If you answer affirmatively, you will have to perform the configuration again as established in this guide from step number 1.</p>
+</li>
+</ol>
+<p>For more details and assistance, do not hesitate to contact us at <a href="http://www.enablitech.com">www.enablitech.com</a></p>
+
